@@ -2,7 +2,7 @@
 FROM shubh360/node-image:04
 
 # Set the working directory
-WORKDIR /my-node-app 
+WORKDIR /node-application
 
 # Copy package.json and package-lock.json
 #COPY package*.json ./
@@ -31,4 +31,4 @@ EXPOSE $PORT
 
 
 # Define the command to run the app
-CMD ["node", "index.js"]
+CMD ["touch", "hello"]
