@@ -1,0 +1,18 @@
+{
+    "ERR001": {
+      "message": "Something went Wrong",
+      "reason": "Something went Wrong"
+    },
+    "0001": {
+      "message" : "Data not Found",
+      "reason": "Data not Found"
+    },
+    "0002":{
+      "message": "Maturity date cannot be earlier than start date.",
+      "reason": "Maturity date cannot be earlier than start date."
+    },
+    "0003":{
+      "message": "Due date cannot be earlier than start date.",
+      "reason": "Due date cannot be earlier than start date."
+    }
+}
