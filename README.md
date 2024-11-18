@@ -12,10 +12,4 @@
    "age": 7541684194
    }
    ```
-
-Readme file updated
-file updated by me
-updated file once more
-testing updation
-
-witing for bash response
+All Trash Removed from dev
