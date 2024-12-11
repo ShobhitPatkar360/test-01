@@ -1,4 +1,6 @@
 
+=======
+>>>>>>> main
 # prevent to push
 config.yaml
 .github/workflows/sync-repo.yml 
