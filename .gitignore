@@ -1,8 +1,10 @@
-# remove files
+
+# prevent to push
 config.yaml
+.github/workflows/sync-repo.yml 
+.github/workflows/docker-image.yml 
 .github/
-.github/workflows/sync-repo.yml
-.github/workflows/docker-image.yml
+
 
 # Logs
 logs/*.log

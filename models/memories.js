@@ -4,23 +4,23 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
-const documentSchema = new mongoose.Schema(
+const memoriesSchema = new mongoose.Schema(
     {
         id: {
             type: String,
             default: uuidv4,
         },
-        documentName: {
-            type: String,
-        },
-        description: {
+        heading:{
             type: String
+        },
+        description:{
+            type: String
+        },
+        recipients:{
+            type: Array
         },
         createdBy: {
             type: String,
-        },
-        document:{
-            type: Object
         },
         isDeleted:{
             type: Boolean,
@@ -31,9 +31,9 @@ const documentSchema = new mongoose.Schema(
 );
 
 
-const documentModel = mongoose.model(
-    'document',
-    documentSchema
+const memoriesModel = mongoose.model(
+    'memories',
+    memoriesSchema
 )
 
-export default documentModel;
+export default memoriesModel;

@@ -9,3 +9,8 @@ export const createDocumentSchema = Joi.object({
   description: Joi.string().optional(),
   file: Joi.any().optional(),
 });
+
+export const updateDocumentSchema = Joi.object({
+  documentName: Joi.string().optional(),
+  description: Joi.string().optional(),
+});

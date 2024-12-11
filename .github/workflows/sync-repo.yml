@@ -1,0 +1,32 @@
+name: Repo Synchronization
+on:
+  workflow_dispatch:
+jobs:
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      # Simple script to automate synchronizations
+
+      - name: Set up Git user
+        run: |
+          git config --global user.name "GitHub Actions"
+          git config --global user.email "actions@github.com"
+
+      - name: Updating code
+        run: |
+          # adding substitution url 
+          git config --global url."https://${{secrets.GIT_USERNAME}}:${{secrets.GIT_TOKEN}}@github.com".insteadOf "https://github.com"
+
+          git clone https://github.com/sosimtech/document-service.git
+          cd document-service
+          git checkout -b master origin/master
+
+          # any operation before pushing
+          
+          git remote add upstream https://github.com/dev-swetam/ww_document_service.git
+          git push upstream master:main
+          
+          # removing substitution url
+          git config --global --unset url.https://${{secrets.GIT_USERNAME}}:${{secrets.GIT_TOKEN}}@github.com.insteadof https://github.com

@@ -14,5 +14,9 @@
     "0003":{
       "message": "Due date cannot be earlier than start date.",
       "reason": "Due date cannot be earlier than start date."
-    }
+    },
+    "0004": {
+      "message": "Limit reached. Please upgrade your plan.",
+      "reason": "Limit reached."
+  }
 }

@@ -39,3 +39,10 @@ export const processAndUploadImage = async (imageName, uploadPath) => {
     throw error;
   }
 };
+
+export const copyFile = (sourcePath, destPath) => {
+  if (!fs.existsSync(sourcePath)) {
+    throw new Error(`Source file does not exist: ${sourcePath}`);
+  }
+  fs.copyFileSync(sourcePath, destPath);
+};
