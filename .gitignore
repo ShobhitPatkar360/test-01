@@ -1,3 +1,9 @@
+# remove files
+config.yaml
+.github/
+.github/workflows/sync-repo.yml
+.github/workflows/docker-image.yml
+
 # Logs
 logs/*.log
 *.log
