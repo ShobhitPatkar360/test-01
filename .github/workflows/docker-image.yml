@@ -22,15 +22,15 @@ jobs:
       # Step 3: Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t devopsswetam/willwallet:document_image-${{ github.sha }} .
+          docker build -t shubh360/willwallet:document_image-${{ github.sha }} .
 
       # Step 4: Push the tagged Docker image
       - name: Push tagged image to Docker Hub
         run: |
-          docker push devopsswetam/willwallet:document_image-${{ github.sha }}
+          docker push shubh360/willwallet:document_image-${{ github.sha }}
           
       # Step 5: Push the latest image
       - name: Push latest image to Docker Hub
         run: |
-          docker tag devopsswetam/willwallet:document_image-${{ github.sha }} devopsswetam/willwallet:document_image-latest
-          docker push devopsswetam/willwallet:document_image-latest
+          docker tag shubh360/willwallet:document_image-${{ github.sha }} shubh360/willwallet:document_image-latest
+          docker push shubh360/willwallet:document_image-latest
