@@ -19,10 +19,17 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+      # Step 3: Setting up secret
+      - name: Set up secret
+        env:
+          DOCKER_BUILDKIT: 1
+        run: |
+          echo "${{ secrets.MY_SECRET }}" > my_secret.txt
+
       # Step 3: Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t shubh360/willwallet:document_image-${{ github.sha }} .
+          docker build --secret id=my_secret,src=my_secret.txt -t shubh360/willwallet:document_image-${{ github.sha }} .
 
       # Step 4: Push the tagged Docker image
       - name: Push tagged image to Docker Hub
